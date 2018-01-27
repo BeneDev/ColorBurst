@@ -500,7 +500,7 @@ Prefab:
     - target: {fileID: 114443587188668918, guid: 33ffa2e55831547488dec02468e6043f,
         type: 2}
       propertyPath: offset.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33ffa2e55831547488dec02468e6043f, type: 2}

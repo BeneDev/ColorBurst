@@ -9,6 +9,7 @@ public class CameraController : MonoBehaviour {
     Camera mainCam;
     [SerializeField] Vector3 offset = new Vector3(0f, 3f, 0);
     bool normalMode = true;
+    float rendSize;
 
 	void Start () {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -21,7 +22,8 @@ public class CameraController : MonoBehaviour {
         if(player.GetComponent<PlayerController>().playerstate == PlayerController.state.inside && normalMode == true)
         {
             print("Change into Inside view");
-            mainCam.transform.position += offset * player.GetComponent<PlayerController>().currentlyInside.GetComponent<Renderer>().bounds.size.y;
+            rendSize = player.GetComponent<PlayerController>().currentlyInside.GetComponent<Renderer>().bounds.size.y;
+            mainCam.transform.position += offset * rendSize;
             normalMode = false;
         }
         else
@@ -29,7 +31,7 @@ public class CameraController : MonoBehaviour {
             if (normalMode == false && player.GetComponent<PlayerController>().playerstate != PlayerController.state.inside)
             {
                 print("Change into outside view!");
-                mainCam.transform.position -= offset * player.GetComponent<PlayerController>().currentlyInside.GetComponent<Renderer>().bounds.size.y;
+                mainCam.transform.position -= offset * rendSize;
                 normalMode = true;
             }
         }
