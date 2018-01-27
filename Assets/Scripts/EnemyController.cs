@@ -101,11 +101,22 @@ public class EnemyController : MonoBehaviour {
         }
         else
         {
+            if(attackField.enabled == false)
+            {
+                StartCoroutine(WaitUntilDeadlyAgain());
+            }
             GetComponent<Animator>().enabled = false;
             agent.destination = transform.position;
             transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
             transform.rotation = player.transform.rotation;
         }
+    }
+
+    IEnumerator WaitUntilDeadlyAgain()
+    {
+        yield return new WaitForSeconds(1.5f);
+        attackField.enabled = true;
+
     }
 
     private void OnTriggerEnter(Collider other)
