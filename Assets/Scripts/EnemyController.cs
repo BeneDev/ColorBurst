@@ -11,7 +11,9 @@ public class EnemyController : MonoBehaviour {
     Material mat;
     public bool hijacked = false;
     GameObject player;
-    public enum accessColor
+    color ownColor;
+    public int accessColor;
+    public enum color
     {
         orange,
         green,
@@ -32,6 +34,26 @@ public class EnemyController : MonoBehaviour {
         GotoNextPoint();
         mat = transform.Find("Enemy").transform.Find("MainBody").GetComponent<Renderer>().material;
         player = GameObject.FindGameObjectWithTag("Player");
+        if(transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 8)
+        {
+            ownColor = color.orange;
+            accessColor = 11;
+        }
+        else if(transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 9)
+        {
+            ownColor = color.green;
+            accessColor = 10;
+        }
+        else if(transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 10)
+        {
+            ownColor = color.red;
+            accessColor = 9;
+        }
+        else if(transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 11)
+        {
+            ownColor = color.blue;
+            accessColor = 8;
+        }
         //mat = GetComponentInChildren<Renderer>().material;
     }
 

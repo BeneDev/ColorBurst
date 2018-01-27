@@ -199,12 +199,15 @@ public class PlayerController : MonoBehaviour {
         {
             if (playerstate == state.dashing && collision.gameObject != wasInside)
             {
-                ChangeState(state.insideEnemy);
-                rb.useGravity = false;
-                transform.position = collision.transform.position;
-                currentlyInside = collision.gameObject;
-                wasInside = currentlyInside;
-                currentlyInside.GetComponent<EnemyController>().hijacked = true;
+                if (wasInside.gameObject.layer == collision.gameObject.GetComponent<EnemyController>().accessColor)
+                {
+                    ChangeState(state.insideEnemy);
+                    rb.useGravity = false;
+                    transform.position = collision.transform.position;
+                    currentlyInside = collision.gameObject;
+                    wasInside = currentlyInside;
+                    currentlyInside.GetComponent<EnemyController>().hijacked = true;
+                }
             }
         }
     }
