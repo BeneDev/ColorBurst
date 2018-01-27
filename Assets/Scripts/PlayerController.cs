@@ -109,6 +109,8 @@ public class PlayerController : MonoBehaviour {
             {
                 currentlyInside.GetComponent<EnemyController>().hijacked = false;
             }
+            transform.position += fwd * 2;
+            rb.useGravity = true;
         }
         ChangeState(state.dashing);
         StartCoroutine(Dash());
