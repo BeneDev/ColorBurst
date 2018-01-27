@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour {
     state prevState = state.normal;
     MeshRenderer rend;
     SphereCollider coll;
-    GameObject currentlyInside;
+    public GameObject currentlyInside;
     [SerializeField] GameObject arrow;
 
     // Use this for initialization

@@ -6,9 +6,8 @@ public class CameraController : MonoBehaviour {
 
     GameObject player;
     Vector3 normalModePos;
-    [SerializeField] Vector3 insideModePos;
     Camera mainCam;
-    [SerializeField] Vector3 offset = new Vector3(2f, 3f, 0);
+    [SerializeField] Vector3 offset = new Vector3(0f, 3f, 0);
     bool normalMode = true;
 
 	void Start () {
@@ -21,15 +20,16 @@ public class CameraController : MonoBehaviour {
     {
         if(player.GetComponent<PlayerController>().playerstate == PlayerController.state.inside && normalMode == true)
         {
-            mainCam.transform.position += offset;
+            print("Change into Inside view");
+            mainCam.transform.position += offset * player.GetComponent<PlayerController>().currentlyInside.GetComponent<Renderer>().bounds.size.y;
             normalMode = false;
         }
         else
         {
             if (normalMode == false && player.GetComponent<PlayerController>().playerstate != PlayerController.state.inside)
             {
-                print("Change view!");
-                mainCam.transform.position -= offset;
+                print("Change into outside view!");
+                mainCam.transform.position -= offset * player.GetComponent<PlayerController>().currentlyInside.GetComponent<Renderer>().bounds.size.y;
                 normalMode = true;
             }
         }

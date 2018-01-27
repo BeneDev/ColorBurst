@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 23503675015881426}
   m_Layer: 0
   m_Name: Mesh
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -260,6 +260,7 @@ MonoBehaviour:
   dashSpeed: 20
   dashDuration: 10
   playerstate: 0
+  currentlyInside: {fileID: 0}
   arrow: {fileID: 1428070550279080}
 --- !u!135 &135400773479004696
 SphereCollider:
