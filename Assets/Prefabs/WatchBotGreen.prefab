@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 54357005135716774}
   m_Layer: 0
   m_Name: WatchBotGreen
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -725,6 +725,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  hijacked: 0
 --- !u!135 &135087982087305356
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -15,7 +15,8 @@ public class PlayerController : MonoBehaviour {
     {
         normal,
         dashing,
-        inside
+        inside,
+        insideEnemy
     }
     public state playerstate = state.normal;
     state prevState = state.normal;
@@ -40,9 +41,8 @@ public class PlayerController : MonoBehaviour {
 
     private void MeshColliderToggling()
     {
-        if (playerstate != state.inside)
+        if (playerstate != state.inside || playerstate != state.insideEnemy)
         {
-            currentlyInside = null;
             if (coll.enabled == false)
             {
                 coll.enabled = true;
@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour {
                 rend.enabled = true;
             }
         }
-        if (playerstate == state.inside)
+        if (playerstate == state.inside || playerstate == state.insideEnemy)
         {
             coll.enabled = false;
             rend.enabled = false;
@@ -68,7 +68,15 @@ public class PlayerController : MonoBehaviour {
     void ShowDirectionCursor()
     {
         arrow.GetComponentInChildren<Renderer>().enabled = true;
-        float offsetY = currentlyInside.GetComponent<Renderer>().bounds.size.y;
+        float offsetY;
+        if (playerstate == state.inside)
+        {
+            offsetY = currentlyInside.GetComponent<Renderer>().bounds.size.y;
+        }
+        else
+        {
+            offsetY = 3.5f;
+        }
         Vector3 arrowPos = arrow.transform.position;
         arrowPos.y = offsetY;
         arrow.transform.position = arrowPos;
@@ -81,17 +89,29 @@ public class PlayerController : MonoBehaviour {
         ProcessInput();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(playerstate == state.inside)
-            {
-                transform.position += fwd * 2;
-                rb.useGravity = true;
-            }
-            ChangeState(state.dashing);
-            StartCoroutine(Dash());
+            MakeDash();
         }
         DieIfShoneOn();
         MeshColliderToggling();
         rb.angularVelocity = Vector3.zero;
+    }
+
+    private void MakeDash()
+    {
+        if (playerstate == state.inside)
+        {
+            transform.position += fwd * 2;
+            rb.useGravity = true;
+        }
+        else if (playerstate == state.insideEnemy)
+        {
+            if (currentlyInside.GetComponent<EnemyController>().hijacked == true)
+            {
+                currentlyInside.GetComponent<EnemyController>().hijacked = false;
+            }
+        }
+        ChangeState(state.dashing);
+        StartCoroutine(Dash());
     }
 
     void DieIfShoneOn()
@@ -115,7 +135,7 @@ public class PlayerController : MonoBehaviour {
     private void ProcessInput()
     {
         transform.Rotate(Vector3.up * rotateSpeed * Input.GetAxis("Horizontal"));
-        if (playerstate == state.normal)
+        if (playerstate == state.normal || playerstate == state.insideEnemy)
         {
             Vector3 goFront = fwd.normalized * speed * Input.GetAxis("Vertical");
             rb.velocity = new Vector3(goFront.x, rb.velocity.y, goFront.z);
@@ -149,7 +169,7 @@ public class PlayerController : MonoBehaviour {
     {
         if(collision.gameObject.tag == "HideObj")
         {
-            if (playerstate == state.dashing && collision.gameObject != wasInside)//&& prevState == state.normal)
+            if (playerstate == state.dashing && collision.gameObject != wasInside)
             {
                 ChangeState(state.inside);
                 rb.useGravity = false;
@@ -158,11 +178,23 @@ public class PlayerController : MonoBehaviour {
                 wasInside = currentlyInside;
             }
         }
+        else if(collision.gameObject.tag == "Enemy")
+        {
+            if (playerstate == state.dashing && collision.gameObject != wasInside)
+            {
+                ChangeState(state.insideEnemy);
+                rb.useGravity = false;
+                transform.position = collision.transform.position;
+                currentlyInside = collision.gameObject;
+                wasInside = currentlyInside;
+                currentlyInside.GetComponent<EnemyController>().hijacked = true;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(playerstate != state.inside)
+        if(playerstate != state.inside && playerstate != state.insideEnemy)
         {
             print("DEAD!");
             return;

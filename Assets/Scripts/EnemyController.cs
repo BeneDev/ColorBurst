@@ -9,6 +9,8 @@ public class EnemyController : MonoBehaviour {
     private int destPoint = 0;
     private NavMeshAgent agent;
     Material mat;
+    public bool hijacked = false;
+    GameObject player;
 
 
     void Start()
@@ -22,6 +24,7 @@ public class EnemyController : MonoBehaviour {
 
         GotoNextPoint();
         mat = transform.Find("Enemy").transform.Find("MainBody").GetComponent<Renderer>().material;
+        player = GameObject.FindGameObjectWithTag("Player");
         //mat = GetComponentInChildren<Renderer>().material;
     }
 
@@ -51,15 +54,26 @@ public class EnemyController : MonoBehaviour {
     {
         // Choose the next destination point when the agent gets
         // close to the current one.
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
-            GotoNextPoint();
+        if (hijacked == false)
+        {
+            if (!agent.pathPending && agent.remainingDistance < 0.5f)
+            {
+                GotoNextPoint();
+            }
+        }
+        else
+        {
+            agent.destination = transform.position;
+            transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
+            transform.rotation = player.transform.rotation;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "PlayerTarget")
         {
-            print("Set the outline");
+            //print("Set the outline");
             SetOutline(0.1f);
         }
     }

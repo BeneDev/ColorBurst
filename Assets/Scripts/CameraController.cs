@@ -26,9 +26,15 @@ public class CameraController : MonoBehaviour {
             mainCam.transform.position += offset * rendSize;
             normalMode = false;
         }
+        else if (player.GetComponent<PlayerController>().playerstate == PlayerController.state.insideEnemy && normalMode == true)
+        {
+            rendSize = 3f;
+            mainCam.transform.position += offset * rendSize;
+            normalMode = false;
+        }
         else
         {
-            if (normalMode == false && player.GetComponent<PlayerController>().playerstate != PlayerController.state.inside)
+            if (normalMode == false && player.GetComponent<PlayerController>().playerstate != PlayerController.state.inside && player.GetComponent<PlayerController>().playerstate != PlayerController.state.insideEnemy)
             {
                 //print("Change into outside view!");
                 mainCam.transform.position -= offset * rendSize;
