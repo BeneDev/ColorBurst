@@ -132,9 +132,15 @@ public class PlayerController : MonoBehaviour {
             if (currentlyInside.GetComponent<HideObjController>().shineOn == true)
             {
                 print("DEAD!");
+                //LevelReset();
                 return;
             }
         }
+    }
+
+    private void LevelReset()
+    {
+        transform.position = Vector3.zero;
     }
 
     void ChangeState(state newState)
@@ -208,6 +214,7 @@ public class PlayerController : MonoBehaviour {
         if(playerstate != state.inside && playerstate != state.insideEnemy)
         {
             print("DEAD!");
+            //LevelReset();
             return;
         }
     }
