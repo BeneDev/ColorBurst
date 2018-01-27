@@ -120,7 +120,7 @@ public class PlayerController : MonoBehaviour {
                 currentlyInside.GetComponent<EnemyController>().hijacked = false;
                 wasInside.GetComponent<EnemyController>().attackField.enabled = false;
             }
-            transform.position += fwd * 2;
+            transform.position += fwd * 4;
             rb.useGravity = true;
         }
         ChangeState(state.dashing);
