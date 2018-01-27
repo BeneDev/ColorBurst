@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour {
     MeshRenderer rend;
     SphereCollider coll;
     public GameObject currentlyInside;
+    private GameObject wasInside;
     [SerializeField] GameObject arrow;
 
     // Use this for initialization
@@ -140,6 +141,7 @@ public class PlayerController : MonoBehaviour {
         if (playerstate == state.dashing)
         {
             ChangeState(state.normal);
+            wasInside = null;
         }
     }
 
@@ -147,12 +149,13 @@ public class PlayerController : MonoBehaviour {
     {
         if(collision.gameObject.tag == "HideObj")
         {
-            if (playerstate == state.dashing && prevState == state.normal)
+            if (playerstate == state.dashing && collision.gameObject != wasInside)//&& prevState == state.normal)
             {
                 ChangeState(state.inside);
                 rb.useGravity = false;
                 transform.position = collision.transform.position;
                 currentlyInside = collision.gameObject;
+                wasInside = currentlyInside;
             }
         }
     }
