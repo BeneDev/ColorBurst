@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4165711548976246}
   - component: {fileID: 33946203852510640}
   - component: {fileID: 23320740936631470}
-  - component: {fileID: 95363893968189134}
   m_Layer: 0
   m_Name: 3d_arrow
   m_TagString: Untagged
@@ -39,7 +38,6 @@ GameObject:
   - component: {fileID: 4440947591989148}
   - component: {fileID: 33383256215034944}
   - component: {fileID: 23091706291946168}
-  - component: {fileID: 95693071941369906}
   - component: {fileID: 64227336851611978}
   m_Layer: 9
   m_Name: KEGEL! (1)
@@ -58,6 +56,7 @@ GameObject:
   - component: {fileID: 4509389112885724}
   - component: {fileID: 54231911354127770}
   - component: {fileID: 114409321956166480}
+  - component: {fileID: 95547853396516310}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -212,7 +211,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 7034802875efc34419da8f00cacb761e, type: 2}
+  - {fileID: 2100000, guid: 434975d78fda99b45a550cc047d58fa2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -313,36 +312,19 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 495f2f10404c25043be422634f6b5556, type: 3}
---- !u!95 &95363893968189134
+--- !u!95 &95547853396516310
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1039693168343124}
+  m_GameObject: {fileID: 1341095770819758}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 25c8eec6236545a4186141d8b62c72af, type: 3}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 69654761b6bbb924a9f1259a6ef4f4c9, type: 3}
+  m_Controller: {fileID: 9100000, guid: 1fabab79565e67c43922627224d06845, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!95 &95693071941369906
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1175691023260302}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 495f2f10404c25043be422634f6b5556, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
