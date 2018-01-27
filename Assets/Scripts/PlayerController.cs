@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour {
             if (currentlyInside.GetComponent<HideObjController>().shineOn == true)
             {
                 print("DEAD!");
-                //LevelReset();
+                LevelReset();
                 return;
             }
         }
@@ -217,10 +217,10 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(playerstate != state.inside && playerstate != state.insideEnemy)
+        if(playerstate != state.inside && playerstate != state.insideEnemy && other.gameObject.tag == "EnemyTarget")
         {
             print("DEAD!");
-            //LevelReset();
+            LevelReset();
             return;
         }
     }
