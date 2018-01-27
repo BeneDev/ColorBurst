@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour {
 
     [SerializeField] Transform[] points;
+    [SerializeField] Animation anim;
     private int destPoint = 0;
     private NavMeshAgent agent;
     Material mat;
@@ -21,10 +22,12 @@ public class EnemyController : MonoBehaviour {
         blue
     }
 
-
-    void Start()
+    IEnumerator Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animation>();
+        anim.Play(anim.clip.name);
+        yield return new WaitForSeconds(anim.clip.length);
 
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as it
@@ -32,7 +35,7 @@ public class EnemyController : MonoBehaviour {
         agent.autoBraking = false;
 
         GotoNextPoint();
-        mat = transform.Find("Enemy").transform.Find("MainBody").GetComponent<Renderer>().material;
+        mat = transform.Find("Enemy").transform.Find("An@Walking").transform.Find("MainBody").GetComponent<Renderer>().material;
         player = GameObject.FindGameObjectWithTag("Player");
         if(transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 8)
         {
