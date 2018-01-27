@@ -19,28 +19,28 @@ public class CameraController : MonoBehaviour {
 	
 	void FixedUpdate ()
     {
-        if(player.GetComponent<PlayerController>().playerstate == PlayerController.state.inside && normalMode == true)
-        {
-            //print("Change into Inside view");
-            rendSize = player.GetComponent<PlayerController>().currentlyInside.GetComponentInChildren<Renderer>().bounds.size.y;
-            mainCam.transform.position += offset * rendSize;
-            normalMode = false;
-        }
-        else if (player.GetComponent<PlayerController>().playerstate == PlayerController.state.insideEnemy && normalMode == true)
-        {
-            rendSize = 3f;
-            mainCam.transform.position += offset * rendSize;
-            normalMode = false;
-        }
-        else
-        {
-            if (normalMode == false && player.GetComponent<PlayerController>().playerstate != PlayerController.state.inside && player.GetComponent<PlayerController>().playerstate != PlayerController.state.insideEnemy)
-            {
-                //print("Change into outside view!");
-                mainCam.transform.position -= offset * rendSize;
-                normalMode = true;
-            }
-        }
+        //if(player.GetComponent<PlayerController>().playerstate == PlayerController.state.inside && normalMode == true)
+        //{
+        //    //print("Change into Inside view");
+        //    rendSize = player.GetComponent<PlayerController>().currentlyInside.GetComponentInChildren<Renderer>().bounds.size.y;
+        //    mainCam.transform.position += offset * rendSize;
+        //    normalMode = false;
+        //}
+        //else if (player.GetComponent<PlayerController>().playerstate == PlayerController.state.insideEnemy && normalMode == true)
+        //{
+        //    rendSize = 3f;
+        //    mainCam.transform.position += offset * rendSize;
+        //    normalMode = false;
+        //}
+        //else
+        //{
+        //    if (normalMode == false && player.GetComponent<PlayerController>().playerstate != PlayerController.state.inside && player.GetComponent<PlayerController>().playerstate != PlayerController.state.insideEnemy)
+        //    {
+        //        //print("Change into outside view!");
+        //        mainCam.transform.position -= offset * rendSize;
+        //        normalMode = true;
+        //    }
+        //}
 	}
 
     private void LateUpdate()

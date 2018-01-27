@@ -776,7 +776,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4509389112885724, guid: f00316782e54bce4ca0c00c21268ba51, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f00316782e54bce4ca0c00c21268ba51, type: 2}
@@ -851,7 +851,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4827412940490780, guid: 33ffa2e55831547488dec02468e6043f, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114443587188668918, guid: 33ffa2e55831547488dec02468e6043f,
         type: 2}
@@ -958,7 +958,7 @@ Transform:
   - {fileID: 2023136949}
   - {fileID: 1123641840}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1035968168
 Prefab:
@@ -1324,7 +1324,7 @@ Transform:
   - {fileID: 1113259366}
   - {fileID: 578078354}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1441827016 stripped
 Transform:
@@ -1506,6 +1506,64 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8df8ec2c538d4b443a1216e9f91843c4, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1732769769
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 64.59189
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2951.7866
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2072.6934
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1309.7521
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b58d6049021f3034e8a0e3df85e1b61b, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2a57785863ece76489f919f6f3351f02, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &1770964193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,7 +1592,7 @@ Transform:
   - {fileID: 1334010805}
   - {fileID: 952709923}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1867569125
 Prefab:

@@ -196,6 +196,8 @@ public class PlayerController : MonoBehaviour {
                 transform.position = collision.transform.position;
                 currentlyInside = collision.gameObject;
                 wasInside = currentlyInside;
+                Vector3 newPos = new Vector3(transform.position.x, collision.gameObject.GetComponentInChildren<Collider>().bounds.size.y, transform.position.z);
+                transform.position = newPos;
             }
         }
         else if(collision.gameObject.tag == "Enemy")
@@ -223,10 +225,5 @@ public class PlayerController : MonoBehaviour {
             LevelReset();
             return;
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        //Gizmos.DrawLine(transform.position, transform.position + fwd*3);
     }
 }
