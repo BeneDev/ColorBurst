@@ -107,6 +107,7 @@ public class PlayerController : MonoBehaviour {
 
     private void MakeDash()
     {
+        GetComponent<Animator>().enabled = false;
         if (playerstate == state.inside)
         {
             transform.position += fwd * 2;
@@ -180,6 +181,7 @@ public class PlayerController : MonoBehaviour {
         {
             ChangeState(state.normal);
             wasInside = null;
+            GetComponent<Animator>().enabled = true;
         }
     }
 

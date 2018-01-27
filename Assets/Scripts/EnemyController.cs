@@ -93,6 +93,7 @@ public class EnemyController : MonoBehaviour {
         // close to the current one.
         if (hijacked == false)
         {
+            GetComponent<Animator>().enabled = true;
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
             {
                 GotoNextPoint();
@@ -100,6 +101,7 @@ public class EnemyController : MonoBehaviour {
         }
         else
         {
+            GetComponent<Animator>().enabled = false;
             agent.destination = transform.position;
             transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
             transform.rotation = player.transform.rotation;
