@@ -147,6 +147,11 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        print("DEAD!");
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, transform.position + fwd*3);
