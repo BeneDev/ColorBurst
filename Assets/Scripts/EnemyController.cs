@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour {
     GameObject player;
     color ownColor;
     public int accessColor;
-    MeshCollider attackField;
+    public MeshCollider attackField;
     public enum color
     {
         orange,

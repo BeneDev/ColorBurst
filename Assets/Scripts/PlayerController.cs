@@ -20,8 +20,8 @@ public class PlayerController : MonoBehaviour {
     }
     public state playerstate = state.normal;
     state prevState = state.normal;
-    MeshRenderer rend;
-    SphereCollider coll;
+    SkinnedMeshRenderer rend;
+    CapsuleCollider coll;
     public GameObject currentlyInside;
     private GameObject wasInside;
     [SerializeField] GameObject arrow;
@@ -29,8 +29,8 @@ public class PlayerController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody>();
-        rend = GetComponentInChildren<MeshRenderer>();
-        coll = GetComponentInChildren<SphereCollider>();
+        rend = transform.Find("Anim").GetComponentInChildren<SkinnedMeshRenderer>();
+        coll = transform.Find("Anim").GetComponentInChildren<CapsuleCollider>();
     }
 
     // Update is called once per frame
@@ -117,6 +117,7 @@ public class PlayerController : MonoBehaviour {
             if (currentlyInside.GetComponent<EnemyController>().hijacked == true)
             {
                 currentlyInside.GetComponent<EnemyController>().hijacked = false;
+                wasInside.GetComponent<EnemyController>().attackField.enabled = false;
             }
             transform.position += fwd * 2;
             rb.useGravity = true;
