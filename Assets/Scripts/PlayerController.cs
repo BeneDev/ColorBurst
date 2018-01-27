@@ -71,7 +71,6 @@ public class PlayerController : MonoBehaviour {
         Vector3 arrowPos = arrow.transform.position;
         arrowPos.y = offsetY;
         arrow.transform.position = arrowPos;
-        //Instantiate(arrow, transform.position + new Vector3(0, offsetY, 0), transform.rotation);
     }
 
     private void FixedUpdate()
@@ -79,8 +78,6 @@ public class PlayerController : MonoBehaviour {
         rb.angularVelocity = Vector3.zero;
         fwd = transform.TransformDirection(Vector3.forward);
         ProcessInput();
-        coll.enabled = false;
-        coll.enabled = true;
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if(playerstate == state.inside)
@@ -91,8 +88,21 @@ public class PlayerController : MonoBehaviour {
             ChangeState(state.dashing);
             StartCoroutine(Dash());
         }
+        DieIfShoneOn();
         MeshColliderToggling();
         rb.angularVelocity = Vector3.zero;
+    }
+
+    void DieIfShoneOn()
+    {
+        if (playerstate == state.inside)
+        {
+            if (currentlyInside.GetComponent<HideObjController>().shineOn == true)
+            {
+                print("DEAD!");
+                return;
+            }
+        }
     }
 
     void ChangeState(state newState)
@@ -113,8 +123,8 @@ public class PlayerController : MonoBehaviour {
 
     IEnumerator Dash()
     {
-        //coll.enabled = false;
-        //coll.enabled = true;
+        coll.enabled = false;
+        coll.enabled = true;
         for (int i = 0; i < dashDuration; i++)
         {
             Vector3 goDash = fwd.normalized * dashSpeed;
@@ -149,7 +159,11 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        print("DEAD!");
+        if(playerstate != state.inside)
+        {
+            print("DEAD!");
+            return;
+        }
     }
 
     private void OnDrawGizmos()

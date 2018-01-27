@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 23818843214872564}
   - component: {fileID: 95428821974112056}
   - component: {fileID: 64661995716239478}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: KEGEL!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,14 +267,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710231785946452}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.6836508, z: -0, w: 0.7298094}
   m_LocalPosition: {x: -1.93, y: 0.16000366, z: -6.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4171731169348004}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 86.259, z: 0}
 --- !u!4 &4519795404367250
 Transform:
   m_ObjectHideFlags: 1
@@ -431,7 +431,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 06ff8e0547e38e4459d8eeb55465e061, type: 2}
+  - {fileID: 2100000, guid: e4bb3d8bde6edab47b191c6a2814c93c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

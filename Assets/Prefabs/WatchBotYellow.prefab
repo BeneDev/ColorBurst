@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 23369916269689710}
   - component: {fileID: 95686676115561884}
   - component: {fileID: 64858755452527248}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: KEGEL!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,14 +312,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1584743778618892}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.44599307, z: -0, w: 0.89503646}
   m_LocalPosition: {x: 13.87, y: 0.16000366, z: 11.490997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4717884148122930}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -52.974003, z: 0}
 --- !u!4 &4708987553093964
 Transform:
   m_ObjectHideFlags: 1
@@ -667,7 +667,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 0.8717933, g: 0.88235295, b: 0.11678202, a: 1}
+  m_Color: {r: 0.63276386, g: 0.6397059, b: 0.1364079, a: 1}
   m_Intensity: 67.25
   m_Range: 17.06
   m_SpotAngle: 60
