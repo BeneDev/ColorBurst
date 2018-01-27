@@ -960,6 +960,11 @@ Prefab:
       propertyPath: points.Array.data[2]
       value: 
       objectReference: {fileID: 86127491}
+    - target: {fileID: 64981591268972136, guid: 432673be70e934c41a652ddca6c7cc89,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 432673be70e934c41a652ddca6c7cc89, type: 2}
   m_IsPrefabParent: 0

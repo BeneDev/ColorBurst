@@ -14,12 +14,40 @@ public class EnemyController : MonoBehaviour {
     GameObject player;
     color ownColor;
     public int accessColor;
+    MeshCollider attackField;
     public enum color
     {
         orange,
         green,
         red,
         blue
+    }
+
+    private void Awake()
+    {
+        attackField = transform.Find("Enemy").GetComponentInChildren<MeshCollider>();
+        mat = transform.Find("Enemy").transform.Find("An@Walking").transform.Find("MainBody").GetComponent<Renderer>().material;
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 8)
+        {
+            ownColor = color.orange;
+            accessColor = 11;
+        }
+        else if (transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 9)
+        {
+            ownColor = color.green;
+            accessColor = 10;
+        }
+        else if (transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 10)
+        {
+            ownColor = color.red;
+            accessColor = 9;
+        }
+        else if (transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 11)
+        {
+            ownColor = color.blue;
+            accessColor = 8;
+        }
     }
 
     IEnumerator Start()
@@ -35,29 +63,6 @@ public class EnemyController : MonoBehaviour {
         agent.autoBraking = false;
 
         GotoNextPoint();
-        mat = transform.Find("Enemy").transform.Find("An@Walking").transform.Find("MainBody").GetComponent<Renderer>().material;
-        player = GameObject.FindGameObjectWithTag("Player");
-        if(transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 8)
-        {
-            ownColor = color.orange;
-            accessColor = 11;
-        }
-        else if(transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 9)
-        {
-            ownColor = color.green;
-            accessColor = 10;
-        }
-        else if(transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 10)
-        {
-            ownColor = color.red;
-            accessColor = 9;
-        }
-        else if(transform.Find("Enemy").transform.Find("KEGEL!").gameObject.layer == 11)
-        {
-            ownColor = color.blue;
-            accessColor = 8;
-        }
-        //mat = GetComponentInChildren<Renderer>().material;
     }
 
 
