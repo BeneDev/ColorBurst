@@ -168,6 +168,6 @@ public class PlayerController : MonoBehaviour {
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawLine(transform.position, transform.position + fwd*3);
+        //Gizmos.DrawLine(transform.position, transform.position + fwd*3);
     }
 }

@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 64661995716239478}
   m_Layer: 9
   m_Name: KEGEL!
-  m_TagString: Untagged
+  m_TagString: EnemyTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +268,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1710231785946452}
   m_LocalRotation: {x: -0, y: 0.6836508, z: -0, w: 0.7298094}
-  m_LocalPosition: {x: -1.93, y: 0.16000366, z: -6.82}
+  m_LocalPosition: {x: -8.79, y: 0.16000366, z: 9.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4171731169348004}
@@ -790,7 +790,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1710231785946452}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2
+  m_Radius: 0.5
   m_Speed: 7
   m_Acceleration: 8
   avoidancePriority: 50

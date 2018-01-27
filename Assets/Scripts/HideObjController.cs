@@ -17,19 +17,32 @@ public class HideObjController : MonoBehaviour {
         
 	}
 
-    public void SetOutline(float thickness)
+    void SetOutline(float thickness)
     {
         mat.SetFloat("_OutlineWidth", thickness);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        shineOn = true;
+        if (other.gameObject.tag == "EnemyTarget")
+        {
+            shineOn = true;
+        }
+        else if(other.gameObject.tag == "PlayerTarget")
+        {
+            SetOutline(0.1f);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        shineOn = false;
+        if (shineOn == true)
+        {
+            shineOn = false;
+        }
+        else
+        {
+            SetOutline(0);
+        }
     }
-
 }
