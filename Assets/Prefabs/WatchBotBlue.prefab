@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4411494344308000}
   - component: {fileID: 108700450840381452}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spotlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4158580975543876}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 33563690068914564}
   - component: {fileID: 135799602196217362}
   - component: {fileID: 23566142792616234}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   - component: {fileID: 33091036448393278}
   - component: {fileID: 135955782668170434}
   - component: {fileID: 23004285281895084}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: MainBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 33735354088660742}
   - component: {fileID: 135400763803818604}
   - component: {fileID: 23940367236923522}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4742211819186502}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WatchRadius
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 33646480190517394}
   - component: {fileID: 135506629796150778}
   - component: {fileID: 23884690514400228}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 33743482892277804}
   - component: {fileID: 135728598281064234}
   - component: {fileID: 23493575772864752}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 33959081218624234}
   - component: {fileID: 136453072590064720}
   - component: {fileID: 23178283221874064}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 195844651856015428}
   - component: {fileID: 114013800054291966}
   - component: {fileID: 54404178524837262}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: WatchBotBlue
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -726,6 +726,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   hijacked: 0
+  accessColor: 0
 --- !u!135 &135400763803818604
 SphereCollider:
   m_ObjectHideFlags: 1

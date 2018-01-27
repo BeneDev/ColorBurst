@@ -1116,10 +1116,6 @@ Prefab:
       propertyPath: points.Array.data[2]
       value: 
       objectReference: {fileID: 86127491}
-    - target: {fileID: 4338775824446392, guid: 080e6fba5b5fbaa42a29e266c1245906, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 475
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 080e6fba5b5fbaa42a29e266c1245906, type: 2}
   m_IsPrefabParent: 0
