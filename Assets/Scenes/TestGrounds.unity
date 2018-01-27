@@ -547,6 +547,14 @@ Prefab:
       propertyPath: points.Array.data[2]
       value: 
       objectReference: {fileID: 86127491}
+    - target: {fileID: 4713866882054454, guid: 26019a51252785c4d9d6f465b198d74f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 4713866882054454, guid: 26019a51252785c4d9d6f465b198d74f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.62
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26019a51252785c4d9d6f465b198d74f, type: 2}
   m_IsPrefabParent: 0
@@ -1128,11 +1136,6 @@ Prefab:
     - target: {fileID: 4509389112885724, guid: f00316782e54bce4ca0c00c21268ba51, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 95547853396516310, guid: f00316782e54bce4ca0c00c21268ba51,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f00316782e54bce4ca0c00c21268ba51, type: 2}
