@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour {
         float offsetY;
         if (playerstate == state.inside)
         {
-            offsetY = currentlyInside.GetComponent<Renderer>().bounds.size.y;
+            offsetY = currentlyInside.GetComponentInChildren<Renderer>().bounds.size.y;
         }
         else
         {

@@ -9,7 +9,7 @@ public class HideObjController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        mat = GetComponent<Renderer>().material;
+        mat = GetComponentInChildren<Renderer>().material;
 	}
 	
 	// Update is called once per frame

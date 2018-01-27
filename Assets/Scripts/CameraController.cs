@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour {
         if(player.GetComponent<PlayerController>().playerstate == PlayerController.state.inside && normalMode == true)
         {
             //print("Change into Inside view");
-            rendSize = player.GetComponent<PlayerController>().currentlyInside.GetComponent<Renderer>().bounds.size.y;
+            rendSize = player.GetComponent<PlayerController>().currentlyInside.GetComponentInChildren<Renderer>().bounds.size.y;
             mainCam.transform.position += offset * rendSize;
             normalMode = false;
         }
