@@ -11,6 +11,13 @@ public class EnemyController : MonoBehaviour {
     Material mat;
     public bool hijacked = false;
     GameObject player;
+    public enum accessColor
+    {
+        orange,
+        green,
+        red,
+        blue
+    }
 
 
     void Start()
