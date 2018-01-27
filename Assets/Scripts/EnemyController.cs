@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour {
     [SerializeField] Transform[] points;
     private int destPoint = 0;
     private NavMeshAgent agent;
+    Material mat;
 
 
     void Start()
@@ -20,6 +21,8 @@ public class EnemyController : MonoBehaviour {
         agent.autoBraking = false;
 
         GotoNextPoint();
+        mat = transform.Find("Enemy").transform.Find("MainBody").GetComponent<Renderer>().material;
+        //mat = GetComponentInChildren<Renderer>().material;
     }
 
 
@@ -39,6 +42,10 @@ public class EnemyController : MonoBehaviour {
         destPoint = (destPoint + 1) % points.Length;
     }
 
+    void SetOutline(float thickness)
+    {
+        mat.SetFloat("_OutlineWidth", thickness);
+    }
 
     void Update()
     {
@@ -47,4 +54,19 @@ public class EnemyController : MonoBehaviour {
         if (!agent.pathPending && agent.remainingDistance < 0.5f)
             GotoNextPoint();
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "PlayerTarget")
+        {
+            print("Set the outline");
+            SetOutline(0.1f);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        SetOutline(0);
+    }
+
 }

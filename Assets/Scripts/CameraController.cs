@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour {
     {
         if(player.GetComponent<PlayerController>().playerstate == PlayerController.state.inside && normalMode == true)
         {
-            print("Change into Inside view");
+            //print("Change into Inside view");
             rendSize = player.GetComponent<PlayerController>().currentlyInside.GetComponent<Renderer>().bounds.size.y;
             mainCam.transform.position += offset * rendSize;
             normalMode = false;
@@ -30,7 +30,7 @@ public class CameraController : MonoBehaviour {
         {
             if (normalMode == false && player.GetComponent<PlayerController>().playerstate != PlayerController.state.inside)
             {
-                print("Change into outside view!");
+                //print("Change into outside view!");
                 mainCam.transform.position -= offset * rendSize;
                 normalMode = true;
             }
