@@ -50,12 +50,9 @@ public class EnemyController : MonoBehaviour {
         }
     }
 
-    IEnumerator Start()
+    void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animation>();
-        anim.Play(anim.clip.name);
-        yield return new WaitForSeconds(anim.clip.length);
 
         // Disabling auto-braking allows for continuous movement
         // between points (ie, the agent doesn't slow down as it
@@ -93,6 +90,10 @@ public class EnemyController : MonoBehaviour {
         // close to the current one.
         if (hijacked == false)
         {
+            if (attackField.enabled == false)
+            {
+                StartCoroutine(WaitUntilDeadlyAgain());
+            }
             GetComponent<Animator>().enabled = true;
             if (!agent.pathPending && agent.remainingDistance < 0.5f)
             {
@@ -101,10 +102,6 @@ public class EnemyController : MonoBehaviour {
         }
         else
         {
-            if(attackField.enabled == false)
-            {
-                StartCoroutine(WaitUntilDeadlyAgain());
-            }
             GetComponent<Animator>().enabled = false;
             agent.destination = transform.position;
             transform.position = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
