@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Green
-  m_Shader: {fileID: 4800000, guid: 2b7f8d06ef212a14d811d9b8dab25930, type: 3}
+  m_Name: BrownHide
+  m_Shader: {fileID: 4800000, guid: 9a75c25164edf2347848b9399719a412, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -62,10 +62,11 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Limiter: 3.86
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.29
+    - _Outline: 0
     - _OutlineWidth: 0
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
@@ -74,6 +75,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.15069206, g: 0.38235295, b: 0.09277681, a: 1}
+    - _Color: {r: 0.8602941, g: 0.48563865, b: 0.1454909, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 0.8897059, g: 0.20280059, b: 0.20280059, a: 1}
+    - _OutlineColor: {r: 0.6544118, g: 0.14916737, b: 0.14916737, a: 1}

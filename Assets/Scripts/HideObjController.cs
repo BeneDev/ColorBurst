@@ -9,7 +9,7 @@ public class HideObjController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        mat = GetComponentInChildren<Renderer>().material;
+        mat = transform.Find("Body").GetComponentInChildren<Renderer>().material;
 	}
 	
 	// Update is called once per frame
@@ -19,7 +19,7 @@ public class HideObjController : MonoBehaviour {
 
     void SetOutline(float thickness)
     {
-        mat.SetFloat("_OutlineWidth", thickness);
+        mat.SetFloat("_Outline", thickness);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,7 +30,7 @@ public class HideObjController : MonoBehaviour {
         }
         else if(other.gameObject.tag == "PlayerTarget")
         {
-            SetOutline(0.1f);
+            SetOutline(0.4f);
         }
     }
 

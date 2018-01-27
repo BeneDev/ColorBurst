@@ -47,7 +47,7 @@ public class EnemyController : MonoBehaviour {
 
     void SetOutline(float thickness)
     {
-        mat.SetFloat("_OutlineWidth", thickness);
+        mat.SetFloat("_Outline", thickness);
     }
 
     void Update()
@@ -74,7 +74,7 @@ public class EnemyController : MonoBehaviour {
         if (other.gameObject.tag == "PlayerTarget")
         {
             //print("Set the outline");
-            SetOutline(0.1f);
+            SetOutline(0.4f);
         }
     }
 

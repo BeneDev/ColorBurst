@@ -87,6 +87,10 @@ public class PlayerController : MonoBehaviour {
         rb.angularVelocity = Vector3.zero;
         fwd = transform.TransformDirection(Vector3.forward);
         ProcessInput();
+        if(playerstate == state.inside || playerstate == state.insideEnemy)
+        {
+            SetTriggerForward();
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             MakeDash();
@@ -94,6 +98,11 @@ public class PlayerController : MonoBehaviour {
         DieIfShoneOn();
         MeshColliderToggling();
         rb.angularVelocity = Vector3.zero;
+    }
+
+    void SetTriggerForward()
+    {
+
     }
 
     private void MakeDash()
