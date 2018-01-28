@@ -222,7 +222,7 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(playerstate != state.inside && playerstate != state.insideEnemy && other.gameObject.tag == "EnemyTarget")
+        if(playerstate != state.inside && playerstate != state.insideEnemy && other.gameObject.tag == "EnemyTarget" && gameObject.tag != "PlayerTarget")
         {
             print("DEAD!");
             LevelReset();
