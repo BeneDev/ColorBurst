@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody))]
 //[RequireComponent(typeof(Arrow))]
 public class PlayerController : MonoBehaviour {
@@ -143,6 +144,7 @@ public class PlayerController : MonoBehaviour {
     {
         transform.position = Vector3.zero;
         playerstate = state.normal;
+        SceneManager.LoadScene(2);
     }
 
     void ChangeState(state newState)
