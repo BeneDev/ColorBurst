@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 23071494013595464}
   - component: {fileID: 95109933641529128}
   - component: {fileID: 64981591268972136}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: KEGEL!
   m_TagString: EnemyTarget
   m_Icon: {fileID: 0}

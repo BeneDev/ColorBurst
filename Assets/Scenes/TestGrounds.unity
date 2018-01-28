@@ -1034,19 +1034,10 @@ Prefab:
       propertyPath: points.Array.data[2]
       value: 
       objectReference: {fileID: 333488555}
-    - target: {fileID: 1054804998837000, guid: 432673be70e934c41a652ddca6c7cc89, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 23071494013595464, guid: 432673be70e934c41a652ddca6c7cc89,
+    - target: {fileID: 54334732214834324, guid: 432673be70e934c41a652ddca6c7cc89,
         type: 2}
-      propertyPath: m_Enabled
+      propertyPath: m_IsKinematic
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 64981591268972136, guid: 432673be70e934c41a652ddca6c7cc89,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 432673be70e934c41a652ddca6c7cc89, type: 2}
@@ -1421,7 +1412,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4621586552511690, guid: 565e18f0951d37c4ab272bc036164d0d, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.01
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 4621586552511690, guid: 565e18f0951d37c4ab272bc036164d0d, type: 2}
       propertyPath: m_LocalPosition.z

@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 33383256215034944}
   - component: {fileID: 23091706291946168}
   - component: {fileID: 64227336851611978}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: KEGEL! (1)
   m_TagString: PlayerTarget
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 136208375411153070}
   m_Layer: 0
   m_Name: polySurface1
-  m_TagString: Untagged
+  m_TagString: PlayerCollider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,7 +496,7 @@ MeshCollider:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1175691023260302}
-  m_Material: {fileID: 13400000, guid: 983e01c819e804a4a9c752fa4b00133d, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2

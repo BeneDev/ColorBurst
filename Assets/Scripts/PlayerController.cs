@@ -109,6 +109,10 @@ public class PlayerController : MonoBehaviour {
             float yValue = currentlyInside.transform.position.y + currentlyInside.transform.Find("Body").GetComponentInChildren<BoxCollider>().bounds.size.y;
             transform.position = new Vector3(currentlyInside.transform.position.x, yValue, currentlyInside.transform.position.z);
         }
+        if(rb.velocity.y > 1)
+        {
+            rb.velocity += new Vector3(0, -2f, 0);
+        }
     }
 
     private void MakeDash()

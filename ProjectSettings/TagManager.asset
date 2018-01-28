@@ -10,6 +10,7 @@ TagManager:
   - EnemyTarget
   - Enemy
   - NoEnemyTargetColl
+  - PlayerCollider
   layers:
   - Default
   - TransparentFX
@@ -24,10 +25,10 @@ TagManager:
   - Red
   - Blue
   - NoEnemyTarget
-  - 
-  - 
-  - 
-  - 
+  - GreenTar
+  - OrangeTar
+  - BlueTar
+  - RedTar
   - 
   - 
   - 
