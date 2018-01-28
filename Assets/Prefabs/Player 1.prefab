@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 33383256215034944}
   - component: {fileID: 23091706291946168}
   - component: {fileID: 64227336851611978}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: KEGEL! (1)
   m_TagString: PlayerTarget
   m_Icon: {fileID: 0}
@@ -302,8 +302,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1341095770819758}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.33964664, z: -0, w: 0.9405532}
+  m_LocalPosition: {x: 32.4, y: -0.09, z: -33.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4565282817829980}
@@ -311,7 +311,7 @@ Transform:
   - {fileID: 4779759678629098}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 39.711002, z: 0}
 --- !u!4 &4557084556637792
 Transform:
   m_ObjectHideFlags: 1
