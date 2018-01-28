@@ -235,11 +235,15 @@ public class PlayerController : MonoBehaviour {
         {
             //Physics.IgnoreCollision(collObj.GetComponent<MeshCollider>(), other.gameObject.transform.Find("Enemy").GetComponentInChildren<MeshCollider>());
         }
-        if (playerstate != state.inside && playerstate != state.insideEnemy && other.gameObject.tag == "EnemyTarget" && playerstate != state.dashing)
+        if (playerstate != state.inside && playerstate != state.insideEnemy && other.gameObject.tag == "EnemyTarget")
         {
             print("DEAD!");
             LevelReset();
             return;
+        }
+        if(other.gameObject.tag == "InstantDeath")
+        {
+            LevelReset();
         }
     }
 }

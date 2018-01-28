@@ -75,7 +75,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1341095770819758
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,9 +532,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3675db9d2daab841907f6cc8b848f72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 15
   rotateSpeed: 3
-  dashSpeed: 20
+  dashSpeed: 35
   dashDuration: 10
   playerstate: 0
   currentlyInside: {fileID: 0}
