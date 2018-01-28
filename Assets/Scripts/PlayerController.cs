@@ -24,8 +24,9 @@ public class PlayerController : MonoBehaviour {
     SkinnedMeshRenderer rend;
     CapsuleCollider coll;
     public GameObject currentlyInside;
-    private GameObject wasInside;
+    private GameObject wasInside = null;
     [SerializeField] GameObject arrow;
+    [SerializeField] GameObject collObj;
 
     // Use this for initialization
     void Start () {
@@ -99,6 +100,10 @@ public class PlayerController : MonoBehaviour {
 
     private void LateUpdate()
     {
+        if(rb.useGravity == false)
+        {
+            rb.useGravity = true;
+        }
         if (playerstate == state.inside)
         {
             float yValue = currentlyInside.transform.position.y + currentlyInside.transform.Find("Body").GetComponentInChildren<BoxCollider>().bounds.size.y;
@@ -141,7 +146,7 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    private void LevelReset()
+    public void LevelReset()
     {
         transform.position = Vector3.zero;
         playerstate = state.normal;
@@ -207,7 +212,7 @@ public class PlayerController : MonoBehaviour {
         {
             if (playerstate == state.dashing && collision.gameObject != wasInside)
             {
-                if (wasInside.gameObject.layer == collision.gameObject.GetComponent<EnemyController>().accessColor)
+                if (wasInside.gameObject.layer == collision.gameObject.GetComponent<EnemyController>().accessColor && wasInside != null)
                 {
                     ChangeState(state.insideEnemy);
                     rb.useGravity = false;
@@ -222,7 +227,11 @@ public class PlayerController : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(playerstate != state.inside && playerstate != state.insideEnemy && other.gameObject.tag == "EnemyTarget" && gameObject.tag != "PlayerTarget")
+        if (other.gameObject.tag == "EnemyTarget")
+        {
+            //Physics.IgnoreCollision(collObj.GetComponent<MeshCollider>(), other.gameObject.transform.Find("Enemy").GetComponentInChildren<MeshCollider>());
+        }
+        if (playerstate != state.inside && playerstate != state.insideEnemy && other.gameObject.tag == "EnemyTarget" && playerstate != state.dashing)
         {
             print("DEAD!");
             LevelReset();
