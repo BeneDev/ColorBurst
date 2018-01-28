@@ -31,5 +31,6 @@ public class GameOverScreen : MonoBehaviour
     public void QuitButton()
     {
         Debug.Log("Alt + F4");
+        Application.Quit();
     }
 }
