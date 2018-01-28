@@ -101,7 +101,8 @@ public class PlayerController : MonoBehaviour {
     {
         if (playerstate == state.inside)
         {
-            transform.position = new Vector3(currentlyInside.transform.position.x, transform.position.y, currentlyInside.transform.position.z);
+            float yValue = currentlyInside.transform.position.y + currentlyInside.transform.Find("Body").GetComponentInChildren<BoxCollider>().bounds.size.y;
+            transform.position = new Vector3(currentlyInside.transform.position.x, yValue, currentlyInside.transform.position.z);
         }
     }
 
