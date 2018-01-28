@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 903dfbd93363fda489965eeb11028f36
-timeCreated: 1517095039
+guid: 95303cc1d263f834e913ae3a8d03b1db
+timeCreated: 1517098917
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
@@ -13,6 +13,14 @@ ModelImporter:
     100010: pSphere5
     100012: pSphere6
     100014: pSphere7
+    100016: pSphere8
+    100018: transform15
+    100020: transform16
+    100022: transform17
+    100024: transform18
+    100026: transform19
+    100028: transform20
+    100030: transform21
     400000: //RootNode
     400002: pSphere1
     400004: pSphere2
@@ -21,27 +29,17 @@ ModelImporter:
     400010: pSphere5
     400012: pSphere6
     400014: pSphere7
-    2300000: pSphere1
-    2300002: pSphere2
-    2300004: pSphere3
-    2300006: pSphere4
-    2300008: pSphere5
-    2300010: pSphere6
-    2300012: pSphere7
-    3300000: pSphere1
-    3300002: pSphere2
-    3300004: pSphere3
-    3300006: pSphere4
-    3300008: pSphere5
-    3300010: pSphere6
-    3300012: pSphere7
-    4300000: pSphere1
-    4300002: pSphere2
-    4300004: pSphere3
-    4300006: pSphere4
-    4300008: pSphere5
-    4300010: pSphere6
-    4300012: pSphere7
+    400016: pSphere8
+    400018: transform15
+    400020: transform16
+    400022: transform17
+    400024: transform18
+    400026: transform19
+    400028: transform20
+    400030: transform21
+    2300000: pSphere8
+    3300000: pSphere8
+    4300000: pSphere8
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -87,7 +85,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

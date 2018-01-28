@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour {
         float offsetY;
         if (playerstate == state.inside)
         {
-            offsetY = currentlyInside.GetComponentInChildren<Renderer>().bounds.size.y;
+            offsetY = currentlyInside.GetComponentInChildren<Renderer>().bounds.size.y + currentlyInside.transform.position.y;
         }
         else
         {
@@ -188,7 +188,7 @@ public class PlayerController : MonoBehaviour {
                 transform.position = collision.transform.position;
                 currentlyInside = collision.gameObject;
                 wasInside = currentlyInside;
-                Vector3 newPos = new Vector3(transform.position.x, collision.gameObject.GetComponentInChildren<Collider>().bounds.size.y, transform.position.z);
+                Vector3 newPos = new Vector3(transform.position.x, collision.gameObject.GetComponentInChildren<Collider>().bounds.size.y + collision.gameObject.transform.position.y, transform.position.z);
                 transform.position = newPos;
             }
         }
