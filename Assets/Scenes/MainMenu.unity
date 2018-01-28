@@ -1419,52 +1419,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114855625257594764, guid: e34cbfb2aa9d6c04d98c331378c0d1df,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bd0109c36a4e8b445a19f94136774e74,
-        type: 3}
-    - target: {fileID: 224769288936852944, guid: e34cbfb2aa9d6c04d98c331378c0d1df,
-        type: 2}
-      propertyPath: m_AnchorMin.x
-      value: 0.4007273
-      objectReference: {fileID: 0}
-    - target: {fileID: 224769288936852944, guid: e34cbfb2aa9d6c04d98c331378c0d1df,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.6999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 224769288936852944, guid: e34cbfb2aa9d6c04d98c331378c0d1df,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: -14
-      objectReference: {fileID: 0}
-    - target: {fileID: 224769288936852944, guid: e34cbfb2aa9d6c04d98c331378c0d1df,
-        type: 2}
-      propertyPath: m_AnchorMax.y
-      value: 0.9354029
-      objectReference: {fileID: 0}
-    - target: {fileID: 224769288936852944, guid: e34cbfb2aa9d6c04d98c331378c0d1df,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 0.099998474
-      objectReference: {fileID: 0}
-    - target: {fileID: 224769288936852944, guid: e34cbfb2aa9d6c04d98c331378c0d1df,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: -34
-      objectReference: {fileID: 0}
-    - target: {fileID: 224769288936852944, guid: e34cbfb2aa9d6c04d98c331378c0d1df,
-        type: 2}
-      propertyPath: m_AnchorMin.y
-      value: 0.45320868
-      objectReference: {fileID: 0}
-    - target: {fileID: 224769288936852944, guid: e34cbfb2aa9d6c04d98c331378c0d1df,
-        type: 2}
-      propertyPath: m_AnchorMax.x
-      value: 0.60736364
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e34cbfb2aa9d6c04d98c331378c0d1df, type: 2}
   m_IsPrefabParent: 0
