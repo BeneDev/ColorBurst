@@ -96,6 +96,14 @@ public class PlayerController : MonoBehaviour {
         rb.angularVelocity = Vector3.zero;
     }
 
+    private void LateUpdate()
+    {
+        if (playerstate == state.inside)
+        {
+            transform.position = new Vector3(currentlyInside.transform.position.x, transform.position.y, currentlyInside.transform.position.z);
+        }
+    }
+
     private void MakeDash()
     {
         GetComponent<Animator>().enabled = false;
